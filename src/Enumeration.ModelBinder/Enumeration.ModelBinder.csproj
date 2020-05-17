@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
-    <AssemblyName>AV.Enumeration</AssemblyName>
-    <RootNamespace>AV.Enumeration</RootNamespace>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>AV.Enumeration.ModelBinder</AssemblyName>
+    <RootNamespace>AV.Enumeration.ModelBinder</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,4 +13,13 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Enumeration\Enumeration.csproj" />
+  </ItemGroup>
+
 </Project>

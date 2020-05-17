@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace AnkitVijay.Enumeration
+namespace AV.Enumeration
 {
     public abstract class Enumeration : IComparable
     {
@@ -28,9 +28,7 @@ namespace AnkitVijay.Enumeration
 
         public override bool Equals(object obj)
         {
-            var otherValue = obj as Enumeration;
-
-            if (otherValue == null)
+            if (!(obj is Enumeration otherValue))
                 return false;
 
             var typeMatches = GetType() == obj.GetType();
@@ -52,9 +50,9 @@ namespace AnkitVijay.Enumeration
             out T enumeration)
             where T : Enumeration
         {
-            return TryParse<T>(item => item.Name == valueOrName, out enumeration) ||
+            return TryParse(item => item.Name == valueOrName, out enumeration) ||
                    int.TryParse(valueOrName, out var value) &&
-                   TryParse<T>(item => item.Value == value, out enumeration);
+                   TryParse(item => item.Value == value, out enumeration);
         }
 
         public static T FromValue<T>(int value) where T : Enumeration

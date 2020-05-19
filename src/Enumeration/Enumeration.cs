@@ -21,7 +21,10 @@ namespace AV.Enumeration
 
         public static IEnumerable<T> GetAll<T>() where T : Enumeration
         {
-            var fields = typeof(T).GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly);
+            var fields = typeof(T).GetFields(
+                BindingFlags.Public |
+                BindingFlags.Static |
+                BindingFlags.DeclaredOnly);
 
             return fields.Select(f => f.GetValue(null)).Cast<T>();
         }
@@ -67,20 +70,27 @@ namespace AV.Enumeration
             return matchingItem;
         }
 
-        private static bool TryParse<T>(Func<T, bool> predicate, out T enumeration)
-            where T : Enumeration
+        private static bool TryParse<TEnumeration>(
+            Func<TEnumeration, bool> predicate, 
+            out TEnumeration enumeration)
+            where TEnumeration : Enumeration
         {
-            enumeration = GetAll<T>().FirstOrDefault(predicate);
+            enumeration = GetAll<TEnumeration>().FirstOrDefault(predicate);
             return enumeration != null;
         }
 
-        private static T Parse<T, TK>(TK nameOrValue, string description, Func<T, bool> predicate) where T : Enumeration
+        private static TEnumeration Parse<TEnumeration, TIntOrString>(
+            TIntOrString nameOrValue, 
+            string description,
+            Func<TEnumeration, bool> predicate)
+            where TEnumeration : Enumeration
         {
-            var matchingItem = GetAll<T>().FirstOrDefault(predicate);
+            var matchingItem = GetAll<TEnumeration>().FirstOrDefault(predicate);
 
             if (matchingItem == null)
             {
-                throw new InvalidOperationException($"'{nameOrValue}' is not a valid {description} in {typeof(T)}");
+                throw new InvalidOperationException(
+                    $"'{nameOrValue}' is not a valid {description} in {typeof(TEnumeration)}");
             }
 
             return matchingItem;

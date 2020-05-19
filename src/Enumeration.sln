@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.JsonNet", "Enum
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.ModelBinder", "Enumeration.ModelBinder\Enumeration.ModelBinder.csproj", "{2A330D91-73E9-410F-95E2-C2271ADD498B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration.SchemaFilter", "Enumeration.SchemaFilter\Enumeration.SchemaFilter.csproj", "{B64AA0B9-C268-45BE-A470-3F8543F1A97B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.SchemaFilter", "Enumeration.SchemaFilter\Enumeration.SchemaFilter.csproj", "{B64AA0B9-C268-45BE-A470-3F8543F1A97B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration.Sample.Version1", "Enumeration.Sample\Enumeration.Sample.Version1.csproj", "{C5096D5E-FB6F-49AC-A59B-6EF7514B82C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.Sample.Version1", "Enumeration.Sample\Enumeration.Sample.Version1.csproj", "{C5096D5E-FB6F-49AC-A59B-6EF7514B82C0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D701164C-E88A-4019-9D8F-ACEFAF32B771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration.Sample.Before", "Enumeration.Sample.Before\Enumeration.Sample.Before.csproj", "{7244025B-AD35-40E7-8955-32B5C5192BCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{C5096D5E-FB6F-49AC-A59B-6EF7514B82C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5096D5E-FB6F-49AC-A59B-6EF7514B82C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5096D5E-FB6F-49AC-A59B-6EF7514B82C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7244025B-AD35-40E7-8955-32B5C5192BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7244025B-AD35-40E7-8955-32B5C5192BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7244025B-AD35-40E7-8955-32B5C5192BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7244025B-AD35-40E7-8955-32B5C5192BCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

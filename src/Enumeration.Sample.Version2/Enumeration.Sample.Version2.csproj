@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>AV.Enumeration.Sample.Version2</AssemblyName>
+    <RootNamespace>AV.Enumeration.Sample.Version2</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Enumeration\Enumeration.csproj" />
+  </ItemGroup>
+
+</Project>

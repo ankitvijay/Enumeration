@@ -1,9 +1,9 @@
-using AV.Enumeration.Sample.Version1;
+using AV.Enumeration.Sample.Version2;
 using Enumeration.Sample.Common;
 using Newtonsoft.Json;
 using Xunit;
 
-namespace Enumeration.Sample.Version1.Test
+namespace Enumeration.Sample.Version2.Test
 {
     public class EnumerationSerializerTest
     {

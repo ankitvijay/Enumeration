@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>AV.Enumeration.Sample.Before</AssemblyName>
+    <RootNamespace>AV.Enumeration.Sample.Before</RootNamespace>
   </PropertyGroup>
 
 </Project>

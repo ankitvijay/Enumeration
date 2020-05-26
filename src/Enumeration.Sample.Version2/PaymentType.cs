@@ -23,7 +23,7 @@
 
         private class CreditCardType : PaymentType
         {
-            public CreditCardType() : base(1, nameof(DebitCardType))
+            public CreditCardType() : base(1, nameof(CreditCardType))
             {
             }
 

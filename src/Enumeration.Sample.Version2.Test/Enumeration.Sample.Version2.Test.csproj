@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Enumeration.Sample.Common\Enumeration.Sample.Common.csproj" />
-    <ProjectReference Include="..\Enumeration.Sample\Enumeration.Sample.Version1.csproj" />
+    <ProjectReference Include="..\Enumeration.Sample.Version2\Enumeration.Sample.Version2.csproj" />
   </ItemGroup>
 
 </Project>

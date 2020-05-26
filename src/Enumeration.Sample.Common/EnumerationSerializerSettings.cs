@@ -1,14 +1,12 @@
 ﻿using AV.Enumeration.JsonNet;
 using Newtonsoft.Json;
 
-namespace AV.Enumeration.Sample.Version1
+namespace Enumeration.Sample.Common
 {
     public class EnumerationSerializerSettings : JsonSerializerSettings
     {
         public EnumerationSerializerSettings()
         {
-            ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor;
-
             Converters = new JsonConverter[]
             {
                 new EnumerationNameConverter()

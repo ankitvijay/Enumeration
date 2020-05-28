@@ -9,7 +9,7 @@ namespace Enumeration.Sample.Common
         {
             Converters = new JsonConverter[]
             {
-                new EnumerationNameConverter()
+                new EnumerationJsonConverter()
             };
         }
     }

@@ -8,13 +8,18 @@ namespace Enumeration.Sample.Version2.Test
     public class EnumerationSerializerTest
     {
         [Fact]
-        public void EnumerationSerializesCorrectly()
+        public void EnumerationSerializesAndDeserializesCorrectly()
         {
-            var expected = new Transaction(300, PaymentType.CreditCard);
+            var expected = new Transaction
+            {
+                Amount = 300,
+                PaymentType = PaymentType.CreditCard
+            };
+
             var settings = new EnumerationSerializerSettings();
 
             // Act
-            var json = JsonConvert.SerializeObject(expected, settings);
+            var json = JsonConvert.SerializeObject(expected, new JsonSerializerSettings());
             var actual = JsonConvert.DeserializeObject<Transaction>(json, settings);
 
             Assert.NotNull(actual);

@@ -11,6 +11,10 @@ namespace AV.Enumeration
 
         public int Value { get; }
 
+        protected Enumeration()
+        {
+        }
+
         protected Enumeration(int value, string name)
         {
             Value = value;

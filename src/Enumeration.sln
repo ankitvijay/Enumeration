@@ -23,9 +23,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.Sample.Version2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.Sample.Version1.Test", "Enumeration.Sample.Version1.Test\Enumeration.Sample.Version1.Test.csproj", "{5F5F8D54-4112-4858-B4A3-3FCE7D1EEBAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration.Sample.Version2.Test", "Enumeration.Sample.Version2.Test\Enumeration.Sample.Version2.Test.csproj", "{9AF9E10E-6697-4AA8-ABED-6F0EFD6581AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.Sample.Version2.Test", "Enumeration.Sample.Version2.Test\Enumeration.Sample.Version2.Test.csproj", "{9AF9E10E-6697-4AA8-ABED-6F0EFD6581AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration.Sample.Common", "Enumeration.Sample.Common\Enumeration.Sample.Common.csproj", "{3D189B80-9B4C-42A4-958F-B2BE67F85303}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.Sample.Common", "Enumeration.Sample.Common\Enumeration.Sample.Common.csproj", "{3D189B80-9B4C-42A4-958F-B2BE67F85303}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.SystemTextJson", "Enumeration.SystemTextJson\Enumeration.SystemTextJson.csproj", "{3881FB7F-10AB-43CA-BE93-C5A326BB0444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration.SystemTextJson.Tests", "Enumeration.SystemTextJson.Tests\Enumeration.SystemTextJson.Tests.csproj", "{D46538B2-1621-48B6-B828-C991EF2E3F67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{40A6A777-F840-4860-AA9D-2C16F81B5CAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +79,14 @@ Global
 		{3D189B80-9B4C-42A4-958F-B2BE67F85303}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D189B80-9B4C-42A4-958F-B2BE67F85303}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D189B80-9B4C-42A4-958F-B2BE67F85303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3881FB7F-10AB-43CA-BE93-C5A326BB0444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3881FB7F-10AB-43CA-BE93-C5A326BB0444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3881FB7F-10AB-43CA-BE93-C5A326BB0444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3881FB7F-10AB-43CA-BE93-C5A326BB0444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46538B2-1621-48B6-B828-C991EF2E3F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46538B2-1621-48B6-B828-C991EF2E3F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46538B2-1621-48B6-B828-C991EF2E3F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46538B2-1621-48B6-B828-C991EF2E3F67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,9 +99,11 @@ Global
 		{C5096D5E-FB6F-49AC-A59B-6EF7514B82C0} = {9210EFB5-F9DE-4209-9D6B-69A38CBDA7B7}
 		{7244025B-AD35-40E7-8955-32B5C5192BCC} = {9210EFB5-F9DE-4209-9D6B-69A38CBDA7B7}
 		{DF9A88E0-40FF-4425-B4B5-750E2251EF42} = {9210EFB5-F9DE-4209-9D6B-69A38CBDA7B7}
-		{5F5F8D54-4112-4858-B4A3-3FCE7D1EEBAE} = {9210EFB5-F9DE-4209-9D6B-69A38CBDA7B7}
-		{9AF9E10E-6697-4AA8-ABED-6F0EFD6581AE} = {9210EFB5-F9DE-4209-9D6B-69A38CBDA7B7}
+		{5F5F8D54-4112-4858-B4A3-3FCE7D1EEBAE} = {40A6A777-F840-4860-AA9D-2C16F81B5CAD}
+		{9AF9E10E-6697-4AA8-ABED-6F0EFD6581AE} = {40A6A777-F840-4860-AA9D-2C16F81B5CAD}
 		{3D189B80-9B4C-42A4-958F-B2BE67F85303} = {9210EFB5-F9DE-4209-9D6B-69A38CBDA7B7}
+		{3881FB7F-10AB-43CA-BE93-C5A326BB0444} = {D701164C-E88A-4019-9D8F-ACEFAF32B771}
+		{D46538B2-1621-48B6-B828-C991EF2E3F67} = {40A6A777-F840-4860-AA9D-2C16F81B5CAD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {54D77C06-03DA-4079-815C-9F6CD246A7AC}

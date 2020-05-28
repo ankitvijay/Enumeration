@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace AV.Enumeration.JsonNet
 {
-    public class EnumerationNameConverter : JsonConverter
+    public class EnumerationJsonConverter : JsonConverter
     {
         private const string NameProperty = "Name";
 
@@ -38,7 +38,7 @@ namespace AV.Enumeration.JsonNet
                     return null;
                 default:
                     throw new JsonSerializationException(
-                        $"Unexpected token {reader.TokenType} when parsing a smart enum.");
+                        $"Unexpected token {reader.TokenType} when parsing the enumeration");
             }
         }
 

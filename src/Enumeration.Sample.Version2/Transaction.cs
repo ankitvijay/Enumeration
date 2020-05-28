@@ -5,11 +5,5 @@
         public double Amount { get; set; }
 
         public PaymentType PaymentType { get; set; }
-
-        public Transaction(double amount, PaymentType paymentType)
-        {
-            Amount = amount;
-            PaymentType = paymentType;
-        }
     }
 }

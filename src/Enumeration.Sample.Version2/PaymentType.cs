@@ -1,4 +1,6 @@
-﻿namespace AV.Enumeration.Sample.Version2
+﻿using Newtonsoft.Json;
+
+namespace AV.Enumeration.Sample.Version2
 {
     public abstract class PaymentType : Enumeration
     {
@@ -14,7 +16,7 @@
 
         private class DebitCardType : PaymentType
         {
-            public DebitCardType() : base(0, nameof(DebitCardType))
+            public DebitCardType() : base(0, "DebitCard")
             {
             }
 
@@ -23,7 +25,7 @@
 
         private class CreditCardType : PaymentType
         {
-            public CreditCardType() : base(1, nameof(CreditCardType))
+            public CreditCardType() : base(1, "CreditCard")
             {
             }
 

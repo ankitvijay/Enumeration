@@ -33,7 +33,6 @@ namespace AV.Enumeration.JsonNet
                 case JsonToken.Integer:
                 case JsonToken.String:
                     return GetFromNameOrValue(reader.Value.ToString(), objectType);
-                case JsonToken.StartObject:
                 case JsonToken.Null:
                     return null;
                 default:

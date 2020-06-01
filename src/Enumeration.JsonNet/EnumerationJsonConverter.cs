@@ -4,11 +4,9 @@ using Newtonsoft.Json;
 
 namespace AV.Enumeration.JsonNet
 {
-    public class EnumerationJsonConverter : JsonConverter
+    public class EnumerationJsonConverter : JsonConverter<Enumeration>
     {
-        private const string NameProperty = "Name";
-
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        public override void WriteJson(JsonWriter writer, Enumeration value, JsonSerializer serializer)
         {
             if (value is null)
             {
@@ -16,37 +14,27 @@ namespace AV.Enumeration.JsonNet
             }
             else
             {
-                var name = value.GetType().GetProperty(NameProperty, BindingFlags.Public | BindingFlags.Instance);
-                if (name == null)
-                {
-                    throw new JsonSerializationException($"Error while writing JSON for {value}");
-                }
-
-                writer.WriteValue(name.GetValue(value));
+                writer.WriteValue(value.Name);
             }
         }
 
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        public override Enumeration ReadJson(JsonReader reader,
+            Type objectType,
+            Enumeration existingValue,
+            bool hasExistingValue,
+            JsonSerializer serializer)
         {
-            switch (reader.TokenType)
+            return reader.TokenType switch
             {
-                case JsonToken.Integer:
-                case JsonToken.String:
-                    return GetFromNameOrValue(reader.Value.ToString(), objectType);
-                case JsonToken.Null:
-                    return null;
-                default:
-                    throw new JsonSerializationException(
-                        $"Unexpected token {reader.TokenType} when parsing the enumeration");
-            }
+                JsonToken.Integer => GetEnumerationFromJson(reader.Value.ToString(), objectType),
+                JsonToken.String => GetEnumerationFromJson(reader.Value.ToString(), objectType),
+                JsonToken.Null => null,
+
+                _ => throw new JsonSerializationException($"Unexpected token {reader.TokenType} when parsing an enumeration")
+            };
         }
 
-        public override bool CanConvert(Type objectType)
-        {
-            return objectType.IsSubclassOf(typeof(Enumeration));
-        }
-
-        private static object GetFromNameOrValue(string nameOrValue, Type objectType)
+        private static Enumeration GetEnumerationFromJson(string nameOrValue, Type objectType)
         {
             try
             {
@@ -65,7 +53,7 @@ namespace AV.Enumeration.JsonNet
                 var arguments = new[] { nameOrValue, result };
 
                 genericMethod.Invoke(null, arguments);
-                return arguments[1];
+                return arguments[1] as Enumeration;
             }
             catch (Exception ex)
             {

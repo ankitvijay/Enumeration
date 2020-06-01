@@ -4,6 +4,7 @@
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>AV.Enumeration.JsonNet</AssemblyName>
     <RootNamespace>AV.Enumeration.JsonNet</RootNamespace>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

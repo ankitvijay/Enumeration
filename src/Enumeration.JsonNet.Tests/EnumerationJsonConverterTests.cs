@@ -1,10 +1,9 @@
-using System;
-using System.Text.Json;
 using AV.Enumeration.Sample.Version2;
+using Newtonsoft.Json;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace AV.Enumeration.SystemTextJson.Tests
+namespace AV.Enumeration.JsonNet.Tests
 {
     public class EnumerationJsonConverterTests
     {
@@ -24,21 +23,11 @@ namespace AV.Enumeration.SystemTextJson.Tests
                 PaymentType = PaymentType.CreditCard
             };
 
-            var json = JsonSerializer.Serialize(expected,
-                new JsonSerializerOptions
-                {
-                    Converters =
-                    {
-                        new EnumerationJsonConverter()
-                    }
-                });
+            var json = JsonConvert.SerializeObject(expected, Formatting.Indented, new EnumerationJsonConverter());
 
             _testOutputHelper.WriteLine(json);
-            
-            var actual= JsonSerializer.Deserialize<Transaction>(json, new JsonSerializerOptions()
-            {
-                Converters = { new EnumerationJsonConverter() }
-            });
+
+            var actual = JsonConvert.DeserializeObject<Transaction>(json, new EnumerationJsonConverter());
 
             Assert.Equal(expected.Amount, actual.Amount);
             Assert.Equal(expected.PaymentType, actual.PaymentType);
@@ -53,6 +42,5 @@ namespace AV.Enumeration.SystemTextJson.Tests
             Assert.False(converter.CanConvert(typeof(string)));
             Assert.False(converter.CanConvert(typeof(int)));
         }
-
     }
 }

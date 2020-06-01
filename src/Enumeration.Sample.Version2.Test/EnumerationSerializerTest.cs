@@ -10,10 +10,10 @@ namespace Enumeration.Sample.Version2.Test
         [Fact]
         public void EnumerationSerializesAndDeserializesCorrectly()
         {
-            var expected = new Transaction
+            var expected = new 
             {
                 Amount = 300,
-                PaymentType = PaymentType.CreditCard
+                PaymentType = PaymentType.CreditCard.ToString()
             };
 
             var settings = new EnumerationSerializerSettings();
@@ -24,7 +24,7 @@ namespace Enumeration.Sample.Version2.Test
 
             Assert.NotNull(actual);
             Assert.Equal(expected.Amount, actual.Amount);
-            Assert.Equal(expected.PaymentType, actual.PaymentType);
+            Assert.Equal(expected.PaymentType, actual.PaymentType.Name);
         }
     }
 }

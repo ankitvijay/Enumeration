@@ -9,15 +9,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
-    <PackageReference Include="System.Text.Json" Version="4.7.2" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Enumeration.JsonNet\Enumeration.JsonNet.csproj" />
     <ProjectReference Include="..\Enumeration.Sample.Version2\Enumeration.Sample.Version2.csproj" />
-    <ProjectReference Include="..\Enumeration.SystemTextJson\Enumeration.SystemTextJson.csproj" />
+    <ProjectReference Include="..\Enumeration\Enumeration.csproj" />
   </ItemGroup>
 
 </Project>

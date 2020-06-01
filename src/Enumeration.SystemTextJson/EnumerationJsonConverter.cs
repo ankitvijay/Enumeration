@@ -20,7 +20,7 @@ namespace AV.Enumeration.SystemTextJson
             {
                 case JsonTokenType.Number:
                 case JsonTokenType.String:
-                    return GetFromNameOrValue(reader.GetString(), typeToConvert);
+                    return GetEnumerationFromJson(reader.GetString(), typeToConvert);
                 case JsonTokenType.Null:
                     return null;
                 default:
@@ -47,7 +47,7 @@ namespace AV.Enumeration.SystemTextJson
             }
         }
 
-        private static Enumeration GetFromNameOrValue(string nameOrValue, Type objectType)
+        private static Enumeration GetEnumerationFromJson(string nameOrValue, Type objectType)
         {
             try
             {

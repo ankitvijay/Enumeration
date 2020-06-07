@@ -23,7 +23,8 @@ namespace AV.Enumeration.Sample.ModelBinder.Api
             services.AddControllers(options =>
             {
                 options.ModelBinderProviders.Insert(0, new EnumerationQueryParameterModelBinderProvider());
-            });
+            }).AddJsonOptions(options =>
+                options.JsonSerializerOptions.Converters.Add(new EnumerationJsonConverter()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

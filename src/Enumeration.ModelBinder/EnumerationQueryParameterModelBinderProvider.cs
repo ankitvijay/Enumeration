@@ -4,10 +4,8 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace AV.Enumeration.ModelBinder
 {
-    /// <inheritdoc />
-    public class ExtractEnumerationModelBinderProvider : IModelBinderProvider
+    public class EnumerationQueryParameterModelBinderProvider : IModelBinderProvider
     {
-        /// <inheritdoc />
         public IModelBinder GetBinder(ModelBinderProviderContext context)
         {
             if (context == null)
@@ -30,13 +28,13 @@ namespace AV.Enumeration.ModelBinder
                 return null;
             }
 
-            var methodInfo = typeof(ExtractEnumerationModelBinder)
+            var methodInfo = typeof(EnumerationQueryParameterModelBinder)
                 .GetMethod("CreateInstance"
                     , BindingFlags.Static | BindingFlags.Public);
 
             if (methodInfo == null)
             {
-                throw new InvalidOperationException("Selected operation is not supported");
+                throw new InvalidOperationException("Invalid operation");
             }
 
             var genericMethod = methodInfo.MakeGenericMethod(enumType);

@@ -4,32 +4,18 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace AV.Enumeration.ModelBinder
 {
-    /// <summary>
-    /// <see>
-    ///     <cref>ExtractEnumerationModelBinderProvider</cref>
-    /// </see>
-    /// </summary>
-    public static class ExtractEnumerationModelBinder
+    public static class EnumerationQueryParameterModelBinder
     {
-        /// <summary>
-        /// Create instance of ExtractEnumerationModelBinder
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public static ExtractEnumerationModelBinder<T> CreateInstance<T>()
+        public static EnumerationQueryParameterModelBinder<T> CreateInstance<T>()
             where T : Enumeration
         {
-            return new ExtractEnumerationModelBinder<T>();
+            return new EnumerationQueryParameterModelBinder<T>();
         }
     }
 
-    /// <inheritdoc />
-    public class ExtractEnumerationModelBinder<T> : IModelBinder
+    public class EnumerationQueryParameterModelBinder<T> : IModelBinder
         where T : Enumeration
     {
-        /// <summary>
-        /// <inheritdoc cref="IModelBinder"/>
-        /// </summary>
         public Task BindModelAsync(ModelBindingContext bindingContext)
         {
             if (bindingContext == null)
@@ -50,7 +36,8 @@ namespace AV.Enumeration.ModelBinder
             {
                 bindingContext.Result = ModelBindingResult.Failed();
                 
-                bindingContext.ModelState.AddModelError(nameof(bindingContext.FieldName), "Invalid address type");
+                bindingContext.ModelState.AddModelError(nameof(bindingContext.FieldName),
+                    $"{enumerationName.FirstValue} is not supported");
             }
 
             return Task.CompletedTask;

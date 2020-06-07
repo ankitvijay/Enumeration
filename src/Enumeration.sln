@@ -40,7 +40,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Temp.json = Temp.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration.JsonNet.Tests", "Enumeration.JsonNet.Tests\Enumeration.JsonNet.Tests.csproj", "{D41DF3CE-1B86-4D85-92DB-896630966278}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.JsonNet.Tests", "Enumeration.JsonNet.Tests\Enumeration.JsonNet.Tests.csproj", "{D41DF3CE-1B86-4D85-92DB-896630966278}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeration.Sample.ModelBinder.Api", "Enumeration.Sample.ModelBinder.Api\Enumeration.Sample.ModelBinder.Api.csproj", "{78DEBE9A-958A-4E84-9FCB-BCF6CEF3371F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +106,10 @@ Global
 		{D41DF3CE-1B86-4D85-92DB-896630966278}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D41DF3CE-1B86-4D85-92DB-896630966278}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D41DF3CE-1B86-4D85-92DB-896630966278}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78DEBE9A-958A-4E84-9FCB-BCF6CEF3371F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DEBE9A-958A-4E84-9FCB-BCF6CEF3371F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DEBE9A-958A-4E84-9FCB-BCF6CEF3371F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DEBE9A-958A-4E84-9FCB-BCF6CEF3371F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +129,7 @@ Global
 		{D46538B2-1621-48B6-B828-C991EF2E3F67} = {40A6A777-F840-4860-AA9D-2C16F81B5CAD}
 		{62B331B7-D325-46DB-9E86-3C0B9CCF823D} = {9210EFB5-F9DE-4209-9D6B-69A38CBDA7B7}
 		{D41DF3CE-1B86-4D85-92DB-896630966278} = {40A6A777-F840-4860-AA9D-2C16F81B5CAD}
+		{78DEBE9A-958A-4E84-9FCB-BCF6CEF3371F} = {9210EFB5-F9DE-4209-9D6B-69A38CBDA7B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {54D77C06-03DA-4079-815C-9F6CD246A7AC}

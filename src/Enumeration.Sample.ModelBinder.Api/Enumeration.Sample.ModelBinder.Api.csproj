@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>AV.Enumeration.Sample.ModelBinder.Api</AssemblyName>
+    <RootNamespace>AV.Enumeration.Sample.ModelBinder.Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Enumeration.ModelBinder\Enumeration.ModelBinder.csproj" />
+    <ProjectReference Include="..\Enumeration.Sample.Version2\Enumeration.Sample.Version2.csproj" />
+    <ProjectReference Include="..\Enumeration.SystemTextJson\Enumeration.SystemTextJson.csproj" />
+  </ItemGroup>
+
+
+</Project>

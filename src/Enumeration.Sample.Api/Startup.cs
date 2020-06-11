@@ -1,4 +1,3 @@
-using System;
 using AV.Enumeration.JsonNet;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,9 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
 
-namespace Enumeration.Sample.Api
+namespace AV.Enumeration.SampleJsonNet.Api
 {
     public class Startup
     {

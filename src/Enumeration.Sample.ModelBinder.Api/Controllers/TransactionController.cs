@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using AV.Enumeration.Sample.Version2;
 using Microsoft.AspNetCore.Mvc;
+using AV.Enumeration.Sample.Version2;
 
 namespace AV.Enumeration.Sample.ModelBinder.Api.Controllers
 {

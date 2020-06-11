@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Enumeration.SampleJsonNet.Api.Controllers
+namespace AV.Enumeration.SampleJsonNet.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

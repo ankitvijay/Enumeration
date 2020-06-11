@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>AV.Enumeration.SampleJsonNet.Api</AssemblyName>
+    <RootNamespace>AV.Enumeration.SampleJsonNet.Api</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Enumeration.JsonNet\Enumeration.JsonNet.csproj" />
+    <ProjectReference Include="..\Enumeration.Sample.Common\Enumeration.Sample.Common.csproj" />
     <ProjectReference Include="..\Enumeration.Sample.Version2\Enumeration.Sample.Version2.csproj" />
   </ItemGroup>
 

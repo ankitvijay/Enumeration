@@ -1,7 +1,7 @@
 ﻿using AV.Enumeration.JsonNet;
 using Newtonsoft.Json;
 
-namespace Enumeration.Sample.Common
+namespace AV.Enumeration.Sample.Common
 {
     public class EnumerationSerializerSettings : JsonSerializerSettings
     {

@@ -1,7 +1,8 @@
+using AV.Enumeration.Sample.Common;
 using AV.Enumeration.Sample.Version2;
-using Enumeration.Sample.Common;
 using Newtonsoft.Json;
 using Xunit;
+using PaymentType = AV.Enumeration.Sample.Version2.PaymentType;
 
 namespace Enumeration.Sample.Version2.Test
 {

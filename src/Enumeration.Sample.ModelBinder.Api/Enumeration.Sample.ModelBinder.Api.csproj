@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Enumeration.ModelBinder\Enumeration.ModelBinder.csproj" />
+    <ProjectReference Include="..\Enumeration.Sample.Common\Enumeration.Sample.Common.csproj" />
     <ProjectReference Include="..\Enumeration.Sample.Version2\Enumeration.Sample.Version2.csproj" />
     <ProjectReference Include="..\Enumeration.SystemTextJson\Enumeration.SystemTextJson.csproj" />
   </ItemGroup>

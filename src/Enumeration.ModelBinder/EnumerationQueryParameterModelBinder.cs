@@ -37,7 +37,7 @@ namespace AV.Enumeration.ModelBinder
                 bindingContext.Result = ModelBindingResult.Failed();
                 
                 bindingContext.ModelState.AddModelError(nameof(bindingContext.FieldName),
-                    $"{enumerationName.FirstValue} is not supported");
+                    $"{enumerationName.FirstValue} is not supported.");
             }
 
             return Task.CompletedTask;

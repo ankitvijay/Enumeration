@@ -4,16 +4,16 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace AV.Enumeration.ModelBinder
 {
-    public static class EnumerationQueryParameterModelBinder
+    public static class EnumerationQueryStringModelBinder
     {
-        public static EnumerationQueryParameterModelBinder<T> CreateInstance<T>()
+        public static EnumerationQueryStringModelBinder<T> CreateInstance<T>()
             where T : Enumeration
         {
-            return new EnumerationQueryParameterModelBinder<T>();
+            return new EnumerationQueryStringModelBinder<T>();
         }
     }
 
-    public class EnumerationQueryParameterModelBinder<T> : IModelBinder
+    public class EnumerationQueryStringModelBinder<T> : IModelBinder
         where T : Enumeration
     {
         public Task BindModelAsync(ModelBindingContext bindingContext)
@@ -24,11 +24,7 @@ namespace AV.Enumeration.ModelBinder
             }
 
             var enumerationName = bindingContext.ValueProvider.GetValue(bindingContext.FieldName);
-            if (string.IsNullOrEmpty(enumerationName.FirstValue))
-            {
-                bindingContext.Result = ModelBindingResult.Success(default(T));
-            }
-            else if (Enumeration.TryGetFromValueOrName<T>(enumerationName.FirstValue, out var result))
+            if (Enumeration.TryGetFromValueOrName<T>(enumerationName.FirstValue, out var result))
             {
                 bindingContext.Result = ModelBindingResult.Success(result);
             }
@@ -36,7 +32,7 @@ namespace AV.Enumeration.ModelBinder
             {
                 bindingContext.Result = ModelBindingResult.Failed();
                 
-                bindingContext.ModelState.AddModelError(nameof(bindingContext.FieldName),
+                bindingContext.ModelState.AddModelError(bindingContext.FieldName,
                     $"{enumerationName.FirstValue} is not supported.");
             }
 

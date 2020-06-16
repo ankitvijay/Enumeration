@@ -15,7 +15,6 @@ namespace AV.Enumeration.Sample.ModelBinder.Api.Controllers
         [Route("code")]
         public string Get(PaymentType paymentType)
         {
-            // return paymentType.Code;
             return paymentType.Code;
         }
 

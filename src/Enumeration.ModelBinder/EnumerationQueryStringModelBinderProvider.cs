@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace AV.Enumeration.ModelBinder
 {
-    public class EnumerationQueryParameterModelBinderProvider : IModelBinderProvider
+    public class EnumerationQueryStringModelBinderProvider : IModelBinderProvider
     {
         public IModelBinder GetBinder(ModelBinderProviderContext context)
         {
@@ -28,7 +28,7 @@ namespace AV.Enumeration.ModelBinder
                 return null;
             }
 
-            var methodInfo = typeof(EnumerationQueryParameterModelBinder)
+            var methodInfo = typeof(EnumerationQueryStringModelBinder)
                 .GetMethod("CreateInstance"
                     , BindingFlags.Static | BindingFlags.Public);
 

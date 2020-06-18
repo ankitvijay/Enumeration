@@ -5,6 +5,11 @@
     <AssemblyName>AV.Enumeration.JsonNet</AssemblyName>
     <RootNamespace>AV.Enumeration.JsonNet</RootNamespace>
     <LangVersion>latest</LangVersion>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>Ankit Vijay</Authors>
   </PropertyGroup>
 
   <ItemGroup>

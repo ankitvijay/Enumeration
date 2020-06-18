@@ -4,6 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>AV.Enumeration.ModelBinder</AssemblyName>
     <RootNamespace>AV.Enumeration.ModelBinder</RootNamespace>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>Ankit Vijay</Authors>
   </PropertyGroup>
 
   <ItemGroup>

@@ -19,9 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{9210EF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.Sample.Version2", "Enumeration.Sample.Version2\Enumeration.Sample.Version2.csproj", "{DF9A88E0-40FF-4425-B4B5-750E2251EF42}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.Sample.Version1.Test", "Enumeration.Sample.Version1.Test\Enumeration.Sample.Version1.Test.csproj", "{5F5F8D54-4112-4858-B4A3-3FCE7D1EEBAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.Sample.Version1.Tests", "Enumeration.Sample.Version1.Tests\Enumeration.Sample.Version1.Tests.csproj", "{5F5F8D54-4112-4858-B4A3-3FCE7D1EEBAE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.Sample.Version2.Test", "Enumeration.Sample.Version2.Test\Enumeration.Sample.Version2.Test.csproj", "{9AF9E10E-6697-4AA8-ABED-6F0EFD6581AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.Sample.Version2.Tests", "Enumeration.Sample.Version2.Tests\Enumeration.Sample.Version2.Tests.csproj", "{9AF9E10E-6697-4AA8-ABED-6F0EFD6581AE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.Sample.Common", "Enumeration.Sample.Common\Enumeration.Sample.Common.csproj", "{3D189B80-9B4C-42A4-958F-B2BE67F85303}"
 EndProject

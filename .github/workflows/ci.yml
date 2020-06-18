@@ -56,15 +56,23 @@ jobs:
     - name: Test
       run: dotnet test --configuration Release --no-build --verbosity normal
 
-    - name: Nuget Pack
+    - name: Nuget Pack - Enumeration Project
       if: ${{ github.event_name == 'push' }}
       run: dotnet pack Enumeration/Enumeration.csproj --configuration Release --no-build -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} -o output
+
+    - name: Nuget Pack - Enumeration.JsonNet Project
+      if: ${{ github.event_name == 'push' }}
+      run: dotnet pack Enumeration.JsonNet/Enumeration.JsonNet.csproj --configuration Release --no-build -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} -o output
+
+    - name: Nuget Pack - Enumeration.ModelBinder Project
+      if: ${{ github.event_name == 'push' }}
+      run: dotnet pack Enumeration.ModelBinder/Enumeration.ModelBinder.csproj --configuration Release --no-build -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} -o output
 
     - name: Upload artifact
       if: ${{ github.event_name == 'push' }}
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: Enumeration
+        name: Enumeration Nugets
         path: src/output
 
     # - name: Push to Nuget.org

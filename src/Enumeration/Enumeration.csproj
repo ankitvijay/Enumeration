@@ -9,6 +9,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Ankit Vijay</Authors>
+    <Description>Enumeration class as an alternate to Enum types.</Description>
   </PropertyGroup>
 
   <ItemGroup>

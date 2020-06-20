@@ -1,4 +1,4 @@
-using AV.Enumeration.JsonNet;
+using AV.Enumeration.NewtonsoftJson;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

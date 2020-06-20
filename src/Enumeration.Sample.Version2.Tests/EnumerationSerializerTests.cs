@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using Xunit;
 using PaymentType = AV.Enumeration.Sample.Version2.PaymentType;
 
-namespace Enumeration.Sample.Version2.Test
+namespace Enumeration.Sample.Version2.Tests
 {
     public class EnumerationSerializerTest
     {

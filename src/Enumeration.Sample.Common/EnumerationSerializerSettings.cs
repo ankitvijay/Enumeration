@@ -1,4 +1,4 @@
-﻿using AV.Enumeration.JsonNet;
+﻿using AV.Enumeration.NewtonsoftJson;
 using Newtonsoft.Json;
 
 namespace AV.Enumeration.Sample.Common

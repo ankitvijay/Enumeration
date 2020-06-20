@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Enumeration.Sample.Before
+namespace AV.Enumeration.Sample.Before
 {
     public enum PaymentType
     {

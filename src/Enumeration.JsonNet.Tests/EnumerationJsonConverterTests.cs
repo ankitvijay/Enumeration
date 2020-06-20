@@ -1,9 +1,10 @@
+using AV.Enumeration.NewtonsoftJson;
 using AV.Enumeration.Sample.Version2;
 using Newtonsoft.Json;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace AV.Enumeration.JsonNet.Tests
+namespace AV.Enumeration.SystemTextJson.Tests
 {
     public class EnumerationJsonConverterTests
     {

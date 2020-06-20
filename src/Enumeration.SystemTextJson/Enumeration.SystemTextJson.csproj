@@ -9,6 +9,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Ankit Vijay</Authors>
+    <Description>System.Text.Json serialization support for Enumeration class.</Description>
   </PropertyGroup>
 
   <ItemGroup>

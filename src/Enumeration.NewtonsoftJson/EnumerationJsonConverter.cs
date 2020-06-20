@@ -2,7 +2,7 @@
 using System.Reflection;
 using Newtonsoft.Json;
 
-namespace AV.Enumeration.JsonNet
+namespace AV.Enumeration.NewtonsoftJson
 {
     public class EnumerationJsonConverter : JsonConverter<Enumeration>
     {

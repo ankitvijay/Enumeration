@@ -8,6 +8,6 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Enumeration.JsonNet\Enumeration.JsonNet.csproj" />
+    <ProjectReference Include="..\Enumeration.NewtonsoftJson\Enumeration.NewtonsoftJson.csproj" />
   </ItemGroup>
 </Project>

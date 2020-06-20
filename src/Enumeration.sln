@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration", "Enumeration\Enumeration.csproj", "{BB2C31C0-E1CD-4646-8A0A-211F5AE69C4F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.JsonNet", "Enumeration.JsonNet\Enumeration.JsonNet.csproj", "{9A85AEFD-E7B0-41AD-B261-1E7F6F8E71CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.NewtonsoftJson", "Enumeration.NewtonsoftJson\Enumeration.NewtonsoftJson.csproj", "{9A85AEFD-E7B0-41AD-B261-1E7F6F8E71CF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeration.ModelBinder", "Enumeration.ModelBinder\Enumeration.ModelBinder.csproj", "{2A330D91-73E9-410F-95E2-C2271ADD498B}"
 EndProject

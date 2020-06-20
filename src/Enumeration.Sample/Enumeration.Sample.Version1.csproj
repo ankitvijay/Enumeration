@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Enumeration.JsonNet\Enumeration.JsonNet.csproj" />
+    <ProjectReference Include="..\Enumeration.NewtonsoftJson\Enumeration.NewtonsoftJson.csproj" />
     <ProjectReference Include="..\Enumeration\Enumeration.csproj" />
   </ItemGroup>
 

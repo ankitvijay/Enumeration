@@ -4,12 +4,14 @@
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>AV.Enumeration.SystemTextJson</AssemblyName>
     <RootNamespace>AV.Enumeration.SystemTextJson</RootNamespace>
+    <PackageTags>systemtextjson;serialization;enumeration;enum</PackageTags>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Ankit Vijay</Authors>
     <Description>System.Text.Json serialization support for Enumeration class.</Description>
+    <PackageDescription>System.Text.Json serialization support for Enumeration class.</PackageDescription>
   </PropertyGroup>
 
   <ItemGroup>

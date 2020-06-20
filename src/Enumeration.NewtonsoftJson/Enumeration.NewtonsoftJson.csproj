@@ -4,6 +4,7 @@
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>AV.Enumeration.NewtonsoftJson</AssemblyName>
     <RootNamespace>AV.Enumeration.NewtonsoftJson</RootNamespace>
+    <PackageTags>newtonsoft;serialization;enumeration;enum</PackageTags>
     <LangVersion>latest</LangVersion>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
@@ -11,6 +12,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Ankit Vijay</Authors>
     <Description>Newtonsoft.Json serialization support for Enumeration class.</Description>
+    <PackageDescription>Newtonsoft.Json serialization support for Enumeration class.</PackageDescription>
   </PropertyGroup>
 
   <ItemGroup>

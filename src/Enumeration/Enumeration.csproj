@@ -4,12 +4,14 @@
     <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>AV.Enumeration</AssemblyName>
     <RootNamespace>AV.Enumeration</RootNamespace>
+    <PackageTags>enumeration;enum;ddd</PackageTags>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Ankit Vijay</Authors>
     <Description>Enumeration class as an alternate to Enum types.</Description>
+    <PackageDescription>Enumeration class as an alternate to Enum types.</PackageDescription>
   </PropertyGroup>
 
   <ItemGroup>

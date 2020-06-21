@@ -4,11 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>AV.Enumeration.ModelBinder</AssemblyName>
     <RootNamespace>AV.Enumeration.ModelBinder</RootNamespace>
+    <PackageTags>aspnetcore;enumeration;enum;modelbinder</PackageTags>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Ankit Vijay</Authors>
+    <Description>Custom model binder to allow Enumeration class pass as query string parameter.</Description>
+    <PackageDescription>Custom model binder to allow Enumeration class pass as query string parameter.</PackageDescription>
   </PropertyGroup>
 
   <ItemGroup>

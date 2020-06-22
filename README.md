@@ -2,10 +2,10 @@
 |  Metric      | Status |
 | ---------    | ---------| 
 | Build | [![Build Status](https://dev.azure.com/ankitvijay/Enumeration/_apis/build/status/Enumeration-CI?branchName=master)](https://dev.azure.com/ankitvijay/Enumeration/_build/latest?definitionId=1&branchName=master)|
-| AV.Enumeration | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.svg) |
-| AV.Enumeration.ModelBinder | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.ModelBinder.svg) |
-| AV.Enumeration.SystemTextJson | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.SystemTextJson.svg) |
-| AV.Enumeration.NewtonsoftJson | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.NewtonsoftJson.svg) |
+| AV.Enumeration Nuget | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.svg) |
+| AV.Enumeration.ModelBinder Nuget | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.ModelBinder.svg) |
+| AV.Enumeration.SystemTextJson Nuget | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.SystemTextJson.svg) |
+| AV.Enumeration.NewtonsoftJson Nuget | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.NewtonsoftJson.svg) |
 
 # Enumeration class
 This project implements Enumeration class as an alternate to Enum types. The implementation is inspired from famous [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs) example.
@@ -24,7 +24,7 @@ See: https://ankitvijay.net/2020/06/12/series-enumeration-classes-ddd-and-beyond
 
 # Usage
 
-- `PaymentType` Enumeration
+- `PaymentType` Enumeration class
 
 ```csharp
 public class PaymentType : Enumeration
@@ -39,10 +39,10 @@ public class PaymentType : Enumeration
 }
 ````
 
-- `PaymentType` Enumeration with Behaviour
+- `PaymentType` Enumeration class with Behaviour
 
 ```csharp
-public abstract class PaymentType : Enumeration
+public abstract class PaymentType : Enumeration (Import: `AV.Enumeration`)
 {
     public static readonly PaymentType DebitCard = new DebitCardType();
 
@@ -75,7 +75,7 @@ public abstract class PaymentType : Enumeration
 ```
 
 
-- `System.Text.Json` Serialization/Deserialization
+- `System.Text.Json` Serialization/Deserialization (Import: `AV.Enumeration.SystemTextJson`)
 
 ```csharp
 public class EnumerationJsonConverterTests
@@ -118,7 +118,7 @@ public class EnumerationJsonConverterTests
 }
 ```
 
-- `Newtonsoft.Json` Serialization/Deserialization
+- `Newtonsoft.Json` Serialization/Deserialization (Import: `AV.Enumeration.NewtonsoftJson`)
 
 ```csharp
 public class EnumerationJsonConverterTests
@@ -159,4 +159,33 @@ public class EnumerationJsonConverterTests
             Assert.False(converter.CanConvert(typeof(int)));
         }
     }
+```
+
+- `PaymentType` Enumeration as a query string parameter (Import: `AV.Enumeration.ModelBinder`)
+
+```chsarp
+// Startup.cs
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddControllers(options =>
+    {
+        options.ModelBinderProviders.Insert(0, new EnumerationQueryStringModelBinderProvider());
+    });
+}
+```
+
+```csharp
+
+// Controller
+[ApiController]
+[Route("[controller]")]
+public class TransactionController : ControllerBase
+{
+    [HttpGet]
+    [Route("code")]
+    public string Get(PaymentType paymentType)
+    {
+        return paymentType.Code;
+    }
+}
 ```

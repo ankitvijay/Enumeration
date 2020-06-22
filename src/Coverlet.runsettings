@@ -5,9 +5,16 @@
       <DataCollector friendlyName="XPlat code coverage">
         <Configuration>
           <Exclude>[xunit.*]*</Exclude> <!-- [Assembly-Filter]Type-Filter -->
+          <CodeCoverage>
+            <ModulePaths>
+              <Exclude>
+                <ModulePath>.*\*Sample*\..*</ModulePath>
+              </Exclude>
+            </ModulePaths>
+          </CodeCoverage>
           <ExcludeByAttribute>Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute</ExcludeByAttribute>
           <UseSourceLink>false</UseSourceLink>
-        </Configuration>
+        </Configuration>        
       </DataCollector>
     </DataCollectors>
   </DataCollectionRunSettings>

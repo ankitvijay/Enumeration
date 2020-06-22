@@ -10,8 +10,8 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Ankit Vijay</Authors>
-    <Description>Custom model binder to allow Enumeration class pass as query string parameter.</Description>
-    <PackageDescription>Custom model binder to allow Enumeration class pass as query string parameter.</PackageDescription>
+    <Description>Custom model binder to allow Enumeration class pass as a query string parameter.</Description>
+    <PackageDescription>Custom model binder to allow Enumeration class pass as a query string parameter.</PackageDescription>
   </PropertyGroup>
 
   <ItemGroup>

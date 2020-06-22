@@ -1,3 +1,4 @@
+<a href="https://twitter.com/AutoFixture"><img src="https://img.shields.io/twitter/follow/vijayankit.svg?style=social&label=@vijayankit" alt="vijayankit" align="right" /></a>
 
 |  Metric      | Status |
 | ---------    | ---------| 
@@ -20,7 +21,7 @@ The project provides following NuGet packages:
 
 
 ## Want to know more about Enumeration class?
-See: https://ankitvijay.net/2020/06/12/series-enumeration-classes-ddd-and-beyond/
+See my Enumeration class [blog post series]( https://ankitvijay.net/2020/06/12/series-enumeration-classes-ddd-and-beyond/)
 
 # Usage
 

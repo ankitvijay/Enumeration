@@ -163,7 +163,7 @@ public class EnumerationJsonConverterTests
 
 - `PaymentType` Enumeration as a query string parameter (Import: `AV.Enumeration.ModelBinder`)
 
-```chsarp
+```csharp
 // Startup.cs
 public void ConfigureServices(IServiceCollection services)
 {

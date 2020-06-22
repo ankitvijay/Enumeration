@@ -2,10 +2,10 @@
 |  Metric      | Status |
 | ---------    | ---------| 
 | Build | [![Build Status](https://dev.azure.com/ankitvijay/Enumeration/_apis/build/status/Enumeration-CI?branchName=master)](https://dev.azure.com/ankitvijay/Enumeration/_build/latest?definitionId=1&branchName=master)|
-| AV.Enumeration Nuget | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.svg) |
-| AV.Enumeration.ModelBinder Nuget | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.ModelBinder.svg) |
-| AV.Enumeration.SystemTextJson Nuget | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.SystemTextJson.svg) |
-| AV.Enumeration.NewtonsoftJson Nuget | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.NewtonsoftJson.svg) |
+| AV.Enumeration | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.svg)  ![NuGet Status](https://img.shields.io/nuget/dt/AV.Enumeration.svg) |
+| AV.Enumeration.ModelBinder | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.ModelBinder.svg) ![NuGet Status](https://img.shields.io/nuget/dt/AV.Enumeration.ModelBinder.svg)|
+| AV.Enumeration.SystemTextJson | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.SystemTextJson.svg) ![NuGet Status](https://img.shields.io/nuget/dt/AV.Enumeration.SystemTextJson.svg)|
+| AV.Enumeration.NewtonsoftJson | ![NuGet Status](https://img.shields.io/nuget/v/AV.Enumeration.NewtonsoftJson.svg) ![NuGet Status](https://img.shields.io/nuget/dt/AV.Enumeration.NewtonsoftJson.svg)|
 
 # Enumeration class
 This project implements Enumeration class as an alternate to Enum types. The implementation is inspired from famous [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs) example.

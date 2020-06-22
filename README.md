@@ -19,7 +19,6 @@ The project provides following NuGet packages:
 - AV.Enumeration.NewtonsoftJson - `Newtonsoft.Json` serialization support for Enumeration class. 
 
 
-
 ## Want to know more about Enumeration class?
 See my Enumeration class [blog post series]( https://ankitvijay.net/2020/06/12/series-enumeration-classes-ddd-and-beyond/)
 

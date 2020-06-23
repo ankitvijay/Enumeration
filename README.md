@@ -1,8 +1,9 @@
-[![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.svg)](https://www.nuget.org/packages/AV.Enumeration) [![NuGet](https://img.shields.io/nuget/dt/AV.Enumeration.svg)](https://www.nuget.org/packages/AV.Enumeration) <a href="https://twitter.com/AutoFixture"><img src="https://img.shields.io/twitter/follow/vijayankit.svg?style=social&label=@vijayankit" alt="vijayankit" align="right" /></a>
+[![Build Status](https://dev.azure.com/ankitvijay/Enumeration/_apis/build/status/Enumeration-CI?branchName=master)](https://dev.azure.com/ankitvijay/Enumeration/_build/latest?definitionId=1&branchName=master) [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.svg)](https://www.nuget.org/packages/AV.Enumeration) [![NuGet](https://img.shields.io/nuget/dt/AV.Enumeration.svg)](https://www.nuget.org/packages/AV.Enumeration) <a href="https://twitter.com/AutoFixture"><img src="https://img.shields.io/twitter/follow/vijayankit.svg?style=social&label=@vijayankit" alt="vijayankit" align="right" /></a>
 
+
+# Nuget Packages
 |  Metric      | Status |
 | ---------    | ---------| 
-| Build | [![Build Status](https://dev.azure.com/ankitvijay/Enumeration/_apis/build/status/Enumeration-CI?branchName=master)](https://dev.azure.com/ankitvijay/Enumeration/_build/latest?definitionId=1&branchName=master)|
 | AV.Enumeration | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.svg)](https://www.nuget.org/packages/AV.Enumeration) |
 | AV.Enumeration.ModelBinder | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.ModelBinder.svg)](https://www.nuget.org/packages/AV.Enumeration.ModelBinder)|
 | AV.Enumeration.SystemTextJson | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.SystemTextJson.svg)](https://www.nuget.org/packages/AV.Enumeration.SystemTextJson)|

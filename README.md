@@ -4,9 +4,9 @@
 | ---------    | ---------| 
 | Build | [![Build Status](https://dev.azure.com/ankitvijay/Enumeration/_apis/build/status/Enumeration-CI?branchName=master)](https://dev.azure.com/ankitvijay/Enumeration/_build/latest?definitionId=1&branchName=master)|
 | AV.Enumeration | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.svg)](https://www.nuget.org/packages/AV.Enumeration) |
-| AV.Enumeration.ModelBinder | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.ModelBinder.svg)](https://www.nuget.org/packages/AV.Enumeration.ModelBinder))|
-| AV.Enumeration.SystemTextJson | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.SystemTextJson.svg)](https://www.nuget.org/packages/AV.Enumeration.SystemTextJson))|
-| AV.Enumeration.NewtonsoftJson | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.NewtonsoftJson.svg)](https://www.nuget.org/packages/AV.Enumeration.NewtonsoftJson))|
+| AV.Enumeration.ModelBinder | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.ModelBinder.svg)](https://www.nuget.org/packages/AV.Enumeration.ModelBinder)|
+| AV.Enumeration.SystemTextJson | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.SystemTextJson.svg)](https://www.nuget.org/packages/AV.Enumeration.SystemTextJson)|
+| AV.Enumeration.NewtonsoftJson | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.NewtonsoftJson.svg)](https://www.nuget.org/packages/AV.Enumeration.NewtonsoftJson)|
  
 # Enumeration class
 This project implements Enumeration class as an alternate to Enum types. The implementation is inspired from famous [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs) example.

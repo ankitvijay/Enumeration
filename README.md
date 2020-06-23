@@ -2,7 +2,7 @@
 
 
 # Nuget Packages
-|  Metric      | Status |
+|  Package      | Link |
 | ---------    | ---------| 
 | AV.Enumeration | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.svg)](https://www.nuget.org/packages/AV.Enumeration) |
 | AV.Enumeration.ModelBinder | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.ModelBinder.svg)](https://www.nuget.org/packages/AV.Enumeration.ModelBinder)|

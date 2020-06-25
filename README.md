@@ -40,10 +40,10 @@ public class PaymentType : Enumeration
 }
 ````
 
-- `PaymentType` Enumeration class with Behaviour
+- `PaymentType` Enumeration class with Behaviour  (Import: `AV.Enumeration`)
 
 ```csharp
-public abstract class PaymentType : Enumeration (Import: `AV.Enumeration`)
+public abstract class PaymentType : Enumeration
 {
     public static readonly PaymentType DebitCard = new DebitCardType();
 

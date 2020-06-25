@@ -8,7 +8,6 @@ namespace AV.Enumeration
     /// <summary>
     /// The base type for creating an <see cref="Enumeration"/>
     /// </summary>
-    /// 
     /// <example>
     /// <code>
     /// public class PaymentType : Enumeration
@@ -20,7 +19,6 @@ namespace AV.Enumeration
     ///     }
     /// }
     /// </code>
-    /// 
     /// </example>
     public abstract class Enumeration : IComparable
     {

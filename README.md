@@ -25,7 +25,7 @@ See my Enumeration class [blog post series]( https://ankitvijay.net/2020/06/12/s
 
 # Usage
 
-- `PaymentType` Enumeration class
+- `PaymentType` Enumeration class  (Import: `AV.Enumeration`)
 
 ```csharp
 public class PaymentType : Enumeration

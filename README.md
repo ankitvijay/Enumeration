@@ -89,7 +89,7 @@ public class EnumerationJsonConverterTests
     }
 
     [Fact]
-    public void EnumerationIsSerializesAndDeserializesCorrectly()
+    public void EnumerationSerializesAndDeserializesCorrectly()
     {
         var expected = new Transaction
         {
@@ -148,16 +148,6 @@ public class EnumerationJsonConverterTests
 
             Assert.Equal(expected.Amount, actual.Amount);
             Assert.Equal(expected.PaymentType, actual.PaymentType);
-        }
-
-        [Fact]
-        public void CanConvertReturnsTrueForEnumeration()
-        {
-            var converter = new EnumerationJsonConverter();
-
-            Assert.True(converter.CanConvert(typeof(PaymentType)));
-            Assert.False(converter.CanConvert(typeof(string)));
-            Assert.False(converter.CanConvert(typeof(int)));
         }
     }
 ```

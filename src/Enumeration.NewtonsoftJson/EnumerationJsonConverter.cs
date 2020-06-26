@@ -4,8 +4,17 @@ using Newtonsoft.Json;
 
 namespace AV.Enumeration.NewtonsoftJson
 {
+    /// <summary>
+    /// Converts an <see cref="Enumeration"/> to or from JSON.
+    /// </summary>
     public class EnumerationJsonConverter : JsonConverter<Enumeration>
     {
+        /// <summary>
+        /// Writes a specified <see cref="Enumeration"/> value as JSON.
+        /// </summary>
+        /// <param name="writer">The writer to write to.</param>
+        /// <param name="value">The <see cref="Enumeration"/> value to convert to the JSON.</param>
+        /// <param name="serializer">The calling serializer.</param>
         public override void WriteJson(JsonWriter writer, Enumeration value, JsonSerializer serializer)
         {
             if (value is null)
@@ -18,6 +27,15 @@ namespace AV.Enumeration.NewtonsoftJson
             }
         }
 
+        /// <summary>
+        /// Reads and converts the JSON to type <see cref="Enumeration"/>
+        /// </summary>
+        /// <param name="reader">The reader</param>
+        /// <param name="objectType">The type to convert.</param>
+        /// <param name="existingValue">An object that specifies serialization options to use.</param>
+        /// <param name="hasExistingValue">The existing value has a value.</param>
+        /// <param name="serializer">The calling serializer.</param>
+        /// <returns>The converted value of type <see cref="Enumeration"/>.</returns>
         public override Enumeration ReadJson(JsonReader reader,
             Type objectType,
             Enumeration existingValue,

@@ -4,8 +4,12 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace AV.Enumeration.ModelBinder
 {
+    /// <summary>
+    /// Defines <see cref="EnumerationQueryStringModelBinderProvider"/>
+    /// </summary>
     public class EnumerationQueryStringModelBinderProvider : IModelBinderProvider
     {
+        /// <inheritdoc />
         public IModelBinder GetBinder(ModelBinderProviderContext context)
         {
             if (context == null)

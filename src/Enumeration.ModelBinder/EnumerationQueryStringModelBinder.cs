@@ -4,18 +4,31 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace AV.Enumeration.ModelBinder
 {
+    /// <summary>
+    /// Defines <see cref="EnumerationQueryStringModelBinder"/>
+    /// </summary>
     public static class EnumerationQueryStringModelBinder
     {
-        public static EnumerationQueryStringModelBinder<T> CreateInstance<T>()
-            where T : Enumeration
+        /// <summary>
+        /// Creates an instance of <see cref="EnumerationQueryStringModelBinder{TEnumeration}"/>
+        /// </summary>
+        /// <typeparam name="TEnumeration"></typeparam>
+        /// <returns></returns>
+        public static EnumerationQueryStringModelBinder<TEnumeration> CreateInstance<TEnumeration>()
+            where TEnumeration : Enumeration
         {
-            return new EnumerationQueryStringModelBinder<T>();
+            return new EnumerationQueryStringModelBinder<TEnumeration>();
         }
     }
 
-    public class EnumerationQueryStringModelBinder<T> : IModelBinder
-        where T : Enumeration
+    /// <summary>
+    /// Defines <see cref="EnumerationQueryStringModelBinder{T}"/>
+    /// </summary>
+    /// <typeparam name="TEnumeration">The <typeparamref name="TEnumeration"/> instance.</typeparam>
+    public class EnumerationQueryStringModelBinder<TEnumeration> : IModelBinder
+        where TEnumeration : Enumeration
     {
+        /// <inheritdoc />
         public Task BindModelAsync(ModelBindingContext bindingContext)
         {
             if (bindingContext == null)
@@ -24,7 +37,7 @@ namespace AV.Enumeration.ModelBinder
             }
 
             var enumerationName = bindingContext.ValueProvider.GetValue(bindingContext.FieldName);
-            if (Enumeration.TryGetFromValueOrName<T>(enumerationName.FirstValue, out var result))
+            if (Enumeration.TryGetFromValueOrName<TEnumeration>(enumerationName.FirstValue, out var result))
             {
                 bindingContext.Result = ModelBindingResult.Success(result);
             }

@@ -1,0 +1,54 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  name: Azure Pipelines
+#Your build pipeline references the ‘BuildConfiguration’ variable, which you’ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
+#Your build pipeline references the ‘BuildConfiguration’ variable, which you’ve selected to be settable at queue time. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab, and then select the option to make it settable at queue time. See https://go.microsoft.com/fwlink/?linkid=865971
+
+steps:
+- task: GitVersion@5
+  displayName: GitVersion
+  inputs:
+    configFilePath: GitVersion.yml
+
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    projects: '**/Enumeration.sln'
+    arguments: '--configuration $(BuildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: Test
+  inputs:
+    command: test
+    projects: '**/*.Tests'
+    arguments: '--configuration $(BuildConfiguration) --no-build --collect:"XPlat Code Coverage" --settings $(Build.SourcesDirectory)/src/Coverlet.runsettings'
+
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish code coverage'
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: '$(Agent.TempDirectory)/**/coverage.cobertura.xml'
+
+- task: DotNetCoreCLI@2
+  displayName: 'If master, Pack'
+  inputs:
+    command: pack
+    packagesToPack: '**/Enumeration.csproj;**/Enumeration.NewtonsoftJson.csproj;**/Enumeration.ModelBinder.csproj;**/Enumeration.SystemTextJson.csproj'
+    nobuild: true
+    versioningScheme: byBuildNumber
+  condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'master'))
+
+- task: PublishPipelineArtifact@1
+  displayName: 'Publish Nuget Packages'
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifact: 'Enumeration Packages'
+  condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'master'))
+

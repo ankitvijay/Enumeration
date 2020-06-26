@@ -72,6 +72,14 @@ namespace AV.Enumeration.Tests
         }
 
         [Fact]
+        public void AbsoluteDifferenceReturnsAbsoluteDiffenceOfEnumerationValues()
+        {
+            Enumeration.AbsoluteDifference(PaymentType.CreditCard, PaymentType.DebitCard).ShouldBe(1);
+            Enumeration.AbsoluteDifference(PaymentType.DebitCard, PaymentType.CreditCard).ShouldBe(1);
+            Enumeration.AbsoluteDifference(PaymentType.DebitCard, PaymentType.DebitCard).ShouldBe(0);
+        }
+
+        [Fact]
         public void FromValueReturnsCorrectEnumeration()
         {
             Enumeration.FromValue<PaymentType>(0).ShouldBe(PaymentType.DebitCard);

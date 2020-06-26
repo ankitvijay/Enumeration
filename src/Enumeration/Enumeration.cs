@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 
@@ -39,6 +40,7 @@ namespace AV.Enumeration
         /// This constructor should not be called from the derived class.
         /// It is helpful in doing JSON Serialization or mapping through Automapper.
         /// </remarks>
+        [ExcludeFromCodeCoverage]
         protected Enumeration()
         {
         }
@@ -107,8 +109,8 @@ namespace AV.Enumeration
         /// <param name="valueOrName">The <typeparamref name="TEnumeration"/> value or name.</param>
         /// <param name="enumeration">The <typeparamref name="TEnumeration"/> instance.</param>
         /// <returns>
-        /// <c>true</c> if the instance <see cref="Enumeration"/> contains <typeparamref name="TEnumeration"/> with the specified name,
-        /// <c>false</c>, otherwise.
+        /// <c>true</c> if the instance <see cref="Enumeration"/> contains <typeparamref name="TEnumeration"/> with the specified name;
+        /// otherwise, <c>false</c>.
         /// </returns>
         public static bool TryGetFromValueOrName<TEnumeration>(
             string valueOrName,

@@ -5,15 +5,31 @@ using System.Text.Json.Serialization;
 
 namespace AV.Enumeration.SystemTextJson
 {
+    /// <summary>
+    /// Converts an <see cref="Enumeration"/> to or from JSON.
+    /// </summary>
     public class EnumerationJsonConverter : JsonConverter<Enumeration>
     {
         private const string NameProperty = "Name";
+
+        /// <summary>
+        /// Determines whether the specified type can be converted to <see cref="Enumeration"/>
+        /// </summary>
+        /// <param name="objectType"></param>
+        /// <returns><c>true</c> if the type is subclass of type <see cref="Enumeration"/>; otherwise, <c>false</c>.</returns>
 
         public override bool CanConvert(Type objectType)
         {
             return objectType.IsSubclassOf(typeof(Enumeration));
         }
 
+        /// <summary>
+        /// Reads and converts the JSON to type <see cref="Enumeration"/>
+        /// </summary>
+        /// <param name="reader">The reader</param>
+        /// <param name="typeToConvert">The type to convert.</param>
+        /// <param name="options">An object that specifies serialization options to use.</param>
+        /// <returns>The converted value of type <see cref="Enumeration"/></returns>
         public override Enumeration Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             switch (reader.TokenType)
@@ -29,6 +45,12 @@ namespace AV.Enumeration.SystemTextJson
             }
         }
 
+        /// <summary>
+        /// Writes a specified <see cref="Enumeration"/> value as JSON.
+        /// </summary>
+        /// <param name="writer">The writer to write to.</param>
+        /// <param name="value">The value to convert to the JSON.</param>
+        /// <param name="options">An object that specifies serialization options to use.</param>
         public override void Write(Utf8JsonWriter writer, Enumeration value, JsonSerializerOptions options)
         {
             if (value is null)

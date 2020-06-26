@@ -10,6 +10,7 @@
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Authors>Ankit Vijay</Authors>
     <Description>Newtonsoft.Json serialization support for Enumeration class.</Description>
     <PackageDescription>Newtonsoft.Json serialization support for Enumeration class.</PackageDescription>

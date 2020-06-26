@@ -13,7 +13,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  BuildConfiguration:Release
+  BuildConfiguration: Release
+  BuildPlatform: AnyCpu
 
 steps:
 - task: GitVersion@5

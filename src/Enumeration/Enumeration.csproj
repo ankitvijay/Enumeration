@@ -10,6 +10,8 @@
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
     <Authors>Ankit Vijay</Authors>
     <Description>Enumeration class as an alternate to Enum types.</Description>
     <PackageDescription>Enumeration class as an alternate to Enum types.</PackageDescription>

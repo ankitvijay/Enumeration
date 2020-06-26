@@ -5,10 +5,12 @@
     <AssemblyName>AV.Enumeration.SystemTextJson</AssemblyName>
     <RootNamespace>AV.Enumeration.SystemTextJson</RootNamespace>
     <PackageTags>systemtextjson;serialization;enumeration;enum</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Authors>Ankit Vijay</Authors>
     <Description>System.Text.Json serialization support for Enumeration class.</Description>
     <PackageDescription>System.Text.Json serialization support for Enumeration class.</PackageDescription>

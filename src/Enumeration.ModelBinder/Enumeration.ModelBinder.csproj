@@ -9,6 +9,7 @@
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <Authors>Ankit Vijay</Authors>
     <Description>Custom model binder to allow Enumeration class pass as a query string parameter.</Description>
     <PackageDescription>Custom model binder to allow Enumeration class pass as a query string parameter.</PackageDescription>

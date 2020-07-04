@@ -10,7 +10,7 @@ namespace AV.Enumeration.NSwag
     /// <summary>
     /// Implements <see cref="ISchemaFilter"/> to transform <see cref="Enumeration"/> schema to <see cref="Enum"/>.
     /// </summary>
-    internal class EnumerationToEnumSchemaFilter : ISchemaFilter
+    public class EnumerationToEnumSchemaFilter : ISchemaFilter
     {
         /// <inheritdoc />
         public void Apply(OpenApiSchema schema, SchemaFilterContext context)

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AssemblyName>AV.Enumeration.Sample.NSwag.Api</AssemblyName>
+        <RootNamespace>AV.Enumeration.Sample.NSwag.Api</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Enumeration.NewtonsoftJson\Enumeration.NewtonsoftJson.csproj" />
+      <ProjectReference Include="..\Enumeration.NSwag\Enumeration.NSwag.csproj" />
+      <ProjectReference Include="..\Enumeration.Sample.Version2\Enumeration.Sample.Version2.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.5" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.5.1" />
+    </ItemGroup>
+
+
+</Project>

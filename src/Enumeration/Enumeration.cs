@@ -11,6 +11,7 @@ namespace AV.Enumeration
     /// </summary>
     /// <example>
     /// <code>
+    /// <![CDATA[
     /// public class PaymentType : Enumeration
     /// {
     ///     public static readonly PaymentType DebitCard = new PaymentType(0);
@@ -19,6 +20,7 @@ namespace AV.Enumeration
     ///     {
     ///     }
     /// }
+    /// ]]>
     /// </code>
     /// </example>
     public abstract class Enumeration : IComparable

@@ -6,7 +6,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Newtonsoft.Json.Converters;
 
 namespace AV.Enumeration.Sample.NSwag.Api
 {
@@ -14,10 +13,7 @@ namespace AV.Enumeration.Sample.NSwag.Api
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
         }
-
-        private IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -25,14 +21,13 @@ namespace AV.Enumeration.Sample.NSwag.Api
             services.AddControllers().AddNewtonsoftJson(options =>
             {
                 options.SerializerSettings.Converters.Add(new EnumerationJsonConverter());
-                options.SerializerSettings.Converters.Add(new StringEnumConverter());
             });
 
-            services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(options =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "Enumeration NSwagger Sample", Version = "v1"});
+                options.SwaggerDoc("v1", new OpenApiInfo {Title = "Enumeration NSwagger Sample", Version = "v1"});
                 
-                c.SchemaFilter<EnumerationToEnumSchemaFilter>();
+                options.SchemaFilter<EnumerationToEnumSchemaFilter>();
             });
         }
 
@@ -45,9 +40,9 @@ namespace AV.Enumeration.Sample.NSwag.Api
 
                 app.UseSwagger();
                 
-                app.UseSwaggerUI(c =>
+                app.UseSwaggerUI(options =>
                 {
-                    c.SwaggerEndpoint("v1/swagger.json", "Enumeration NSwagger Sample");
+                    options.SwaggerEndpoint("v1/swagger.json", "Enumeration NSwagger Sample");
                 });
             }
 

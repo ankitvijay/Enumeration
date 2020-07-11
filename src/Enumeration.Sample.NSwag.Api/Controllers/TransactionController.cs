@@ -16,12 +16,5 @@ namespace AV.Enumeration.Sample.NSwag.Api.Controllers
             s_Transactions.Add(transaction);
             return Ok();
         }
-
-        [HttpPost]
-        [Route("get")]
-        public ActionResult<IEnumerable<Transaction>> GetTransactions()
-        {
-            return s_Transactions;
-        }
     }
 }

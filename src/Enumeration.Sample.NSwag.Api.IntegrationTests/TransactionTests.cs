@@ -11,7 +11,7 @@ namespace AV.Enumeration.Sample.NSwag.Api.IntegrationTests
         public void CreateTransactionIsCalledSuccessfully()
         {
             var client = new Client("https://localhost:5001", new HttpClient());
-            Should.NotThrow(async () => await client.CreateAsync(new Transaction()
+            Should.NotThrow(async () => await client.CreateAsync(new Transaction
             {
                 Amount = 500,
                 PaymentType = PaymentType.CreditCard

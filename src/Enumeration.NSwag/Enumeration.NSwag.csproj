@@ -4,15 +4,30 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <AssemblyName>AV.Enumeration.NSwag</AssemblyName>
         <RootNamespace>AV.Enumeration.NSwag</RootNamespace>
+        <PackageTags>aspnetcore;enumeration;enum;modelbinder</PackageTags>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <Authors>Ankit Vijay</Authors>
+        <Description>Custom model binder to allow Enumeration class pass as a query string parameter.</Description>
+        <PackageDescription>Custom model binder to allow Enumeration class pass as a query string parameter.</PackageDescription>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1" />
+        <PackageReference Include="Microsoft.CodeAnalysis" Version="3.5.0"/>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Enumeration.NewtonsoftJson\Enumeration.NewtonsoftJson.csproj" />
-      <ProjectReference Include="..\Enumeration\Enumeration.csproj" />
+        <ProjectReference Include="..\Enumeration.NewtonsoftJson\Enumeration.NewtonsoftJson.csproj"/>
+        <ProjectReference Include="..\Enumeration\Enumeration.csproj"/>
     </ItemGroup>
 
 </Project>

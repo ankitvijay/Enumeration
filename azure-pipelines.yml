@@ -45,7 +45,7 @@ steps:
   displayName: 'If master, Pack'
   inputs:
     command: pack
-    packagesToPack: '**/Enumeration.csproj;**/Enumeration.NewtonsoftJson.csproj;**/Enumeration.ModelBinder.csproj;**/Enumeration.SystemTextJson.csproj'
+    packagesToPack: '**/Enumeration.csproj;**/Enumeration.NewtonsoftJson.csproj;**/Enumeration.ModelBinder.csproj;**/Enumeration.SystemTextJson.csproj;**/Enumeration.NSwag.csproj'
     nobuild: true
     versioningScheme: byBuildNumber
   condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'master'))

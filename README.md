@@ -8,6 +8,7 @@
 | AV.Enumeration.ModelBinder | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.ModelBinder.svg)](https://www.nuget.org/packages/AV.Enumeration.ModelBinder)|
 | AV.Enumeration.SystemTextJson | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.SystemTextJson.svg)](https://www.nuget.org/packages/AV.Enumeration.SystemTextJson)|
 | AV.Enumeration.NewtonsoftJson | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.NewtonsoftJson.svg)](https://www.nuget.org/packages/AV.Enumeration.NewtonsoftJson)|
+| AV.Enumeration.NSwag | [![NuGet](https://img.shields.io/nuget/v/AV.Enumeration.NSwag.svg)](https://www.nuget.org/packages/AV.Enumeration.NSwag)|
  
 # Enumeration class
 This project implements Enumeration class as an alternate to Enum types. The implementation is inspired from famous [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs) example.
@@ -18,10 +19,14 @@ The project provides following NuGet packages:
 - AV.Enumeration.ModelBinder - Custom `ModelBinder` to allow Enumeration class pass as a query string parameter.
 - AV.Enumeration.SystemTextJson - `System.Text.Json` serialization support for Enumeration class.
 - AV.Enumeration.NewtonsoftJson - `Newtonsoft.Json` serialization support for Enumeration class. 
+- AV.Enumeration.NSwag - NSwag support for Enumeration class to generate Enumeration as an Enum type schema.
 
 
 ## Want to know more about Enumeration class?
 See my Enumeration class [blog post series]( https://ankitvijay.net/2020/06/12/series-enumeration-classes-ddd-and-beyond/)
+
+# Give a Star ⭐️
+Found this repository helpful? You can give a star. :)
 
 # Usage
 

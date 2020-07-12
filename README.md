@@ -187,6 +187,7 @@ public class TransactionController : ControllerBase
 ```
 
 ## Support
-Has my work been helpful to you? You can extend you support 
+Has my work been helpful to you? You can extend your support :)
 
-<a href="https://www.buymeacoffee.com/ankitvijay" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" style="width: 200px;"></a>
+<a href="https://www.buymeacoffee.com/ankitvijay" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-red.png" alt="Buy Me A Coffee" width="150"  ></a>
+

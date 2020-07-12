@@ -4,7 +4,7 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <AssemblyName>AV.Enumeration.NSwag</AssemblyName>
         <RootNamespace>AV.Enumeration.NSwag</RootNamespace>
-        <PackageTags>aspnetcore;enumeration;enum;modelbinder</PackageTags>
+        <PackageTags>aspnetcore;enumeration;enum;swagger;nswag;</PackageTags>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
@@ -12,8 +12,8 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <Authors>Ankit Vijay</Authors>
-        <Description>Custom model binder to allow Enumeration class pass as a query string parameter.</Description>
-        <PackageDescription>Custom model binder to allow Enumeration class pass as a query string parameter.</PackageDescription>
+        <Description>NSwag support for Enumeration class to generate Enumeration as an Enum type schema.</Description>
+        <PackageDescription>NSwag support for Enumeration class to generate Enumeration as an Enum type schema.</PackageDescription>
     </PropertyGroup>
 
     <ItemGroup>

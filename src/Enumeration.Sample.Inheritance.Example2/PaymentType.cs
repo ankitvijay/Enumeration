@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace AV.Enumeration.Sample.Version2
+namespace AV.Enumeration.Sample.Inheritance.Example2
 {
     public abstract class PaymentType : Enumeration
     {
@@ -14,7 +12,7 @@ namespace AV.Enumeration.Sample.Version2
         {
         }
 
-        private class DebitCardType : PaymentType
+        protected class DebitCardType : PaymentType
         {
             public DebitCardType() : base(0, "DebitCard")
             {
@@ -23,7 +21,7 @@ namespace AV.Enumeration.Sample.Version2
             public override string Code => "DC";
         }
 
-        private class CreditCardType : PaymentType
+        protected class CreditCardType : PaymentType
         {
             public CreditCardType() : base(1, "CreditCard")
             {

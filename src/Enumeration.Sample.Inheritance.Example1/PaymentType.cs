@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace AV.Enumeration.Sample.Version2
+namespace AV.Enumeration.Sample.Inheritance.Example1
 {
     public abstract class PaymentType : Enumeration
     {

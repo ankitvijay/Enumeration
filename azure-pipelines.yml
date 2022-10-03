@@ -15,12 +15,22 @@ pool:
 variables:
   BuildConfiguration: Release
   BuildPlatform: AnyCpu
+  MajorVersion: '2'
+  MinorVersion: '0'
+  PatchVersion: $[counter(format('{0}.{1}', variables['Major'], variables['Minor']), 0)]
+  ${{ if eq( variables['Build.SourceBranchName'], 'main') }}:
+    PackageVersionType: ''
+  ${{ if ne( variables['Build.SourceBranchName'], 'main') }}:
+    PackageVersionType: '-pre-release'
+  PackageVersion: $(MajorVersion).$(MinorVersion).$(PatchVersion)$(PackageVersionType)
+
 
 steps:
-- task: GitVersion@5
-  displayName: GitVersion
+- task: UseDotNet@2
+  displayName: 'Install DotNet SDK 6'
   inputs:
-    configFilePath: GitVersion.yml
+    packageType: 'sdk'
+    version: '6.0.x'
 
 - task: DotNetCoreCLI@2
   displayName: Build
@@ -42,13 +52,14 @@ steps:
     summaryFileLocation: '$(Agent.TempDirectory)/**/coverage.cobertura.xml'
 
 - task: DotNetCoreCLI@2
-  displayName: 'If master, Pack'
+  displayName: "dotnet pack"
   inputs:
-    command: pack
+    command: 'pack'
+    arguments: '--configuration $(buildConfiguration) -p:PackageVersion=$(PackageVersion)'
     packagesToPack: '**/Enumeration.csproj;**/Enumeration.NewtonsoftJson.csproj;**/Enumeration.ModelBinder.csproj;**/Enumeration.SystemTextJson.csproj;**/Enumeration.NSwag.csproj'
     nobuild: true
-    versioningScheme: byBuildNumber
-  condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'master'))
+    versioningScheme: byEnvVar
+    versionEnvVar: PackageVersion
 
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Nuget Packages'
@@ -56,4 +67,3 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)'
     artifact: 'Enumeration Packages'
   condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'master'))
-

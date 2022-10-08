@@ -66,4 +66,3 @@ steps:
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)'
     artifact: 'Enumeration Packages'
-  condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'master'))
